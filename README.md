@@ -86,7 +86,7 @@ Prowler executed **632 checks** across IAM, EC2, S3, CloudTrail, CloudWatch, VPC
 <summary><b>F-001 — Root account has no MFA [CRITICAL · CIS 1.5]</b></summary>
 
 **Service:** IAM  
-**Risk:** Root has unrestricted access to all AWS resources. A stolen password alone provides complete account takeover — attacker can delete all resources, disable security controls, and exfiltrate all data.  
+**Risk:** Root has unrestricted access to all AWS resources. A stolen password alone provides complete account takeover attacker can delete all resources, disable security controls, and exfiltrate all data.  
 **Remediation:** Enabled virtual MFA via Google Authenticator. Two MFA devices now assigned.
 
 </details>
@@ -122,7 +122,7 @@ Prowler executed **632 checks** across IAM, EC2, S3, CloudTrail, CloudWatch, VPC
 <summary><b>F-005 — S3 bucket publicly accessible [CRITICAL · CIS 2.1.5]</b></summary>
 
 **Service:** S3  
-**Risk:** Bucket policy with `Principal: "*"` allowed unauthenticated read access to all objects — risk of data exfiltration, compliance violations, and reputational damage.  
+**Risk:** Bucket policy with `Principal: "*"` allowed unauthenticated read access to all objects risk of data exfiltration, compliance violations, and reputational damage.  
 **Remediation:** Enabled all 4 Block Public Access settings. Deleted the public bucket policy.
 
 </details>
@@ -146,7 +146,7 @@ Prowler executed **632 checks** across IAM, EC2, S3, CloudTrail, CloudWatch, VPC
 
 ## 🐍 Boto3 Verification Scripts
 
-After manual hardening, **5 Python scripts** using the AWS Boto3 SDK were written to independently verify each control via direct AWS API calls — stronger than console screenshots alone.
+After manual hardening, **5 Python scripts** using the AWS Boto3 SDK were written to independently verify each control via direct AWS API calls stronger than console screenshots alone.
 
 | Script | AWS API Called | CIS Control | Result |
 |:---|:---|:---|:---:|
@@ -156,7 +156,7 @@ After manual hardening, **5 Python scripts** using the AWS Boto3 SDK were writte
 | `verify-iam.py` | `IAM:GetAccountPasswordPolicy` + `ListMFADevices` | CIS 1.8, 1.10 | ✅ PASS |
 | `verify-vpc-flowlogs.py` | `EC2:DescribeFlowLogs` | CIS 3.7 | ✅ PASS |
 
-> **Bonus finding:** The CloudTrail verification script discovered that log file validation (CIS 3.2) was disabled — a gap not caught in the manual review. This demonstrates the real value of scripted verification beyond console checks.
+> **Bonus finding:** The CloudTrail verification script discovered that log file validation (CIS 3.2) was disabled a gap not caught in the manual review. This demonstrates the real value of scripted verification beyond console checks.
 
 ---
 
