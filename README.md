@@ -36,7 +36,7 @@ PREPARE → SCAN → ANALYZE → REPORT → REMEDIATE → RE-SCAN → VERIFY
 | 🟠 High findings | 30 | 17 |
 | 📦 Resources assessed | 56 | 64 |
 
-> **+50 additional checks passing after hardening — a 40% improvement in pass rate**
+> **+50 additional checks passing after hardening a 40% improvement in pass rate**
 
 ---
 
@@ -76,7 +76,7 @@ A dedicated AWS Free Tier account was configured with 8 intentional misconfigs t
 prowler aws --output-formats html json-ocsf --region ap-south-1
 ```
 
-Prowler executed **632 checks** across IAM, EC2, S3, CloudTrail, CloudWatch, VPC, GuardDuty, Config, and KMS — completing in under 3 minutes.
+Prowler executed **632 checks** across IAM, EC2, S3, CloudTrail, CloudWatch, VPC, GuardDuty, Config, and KMS completing in under 3 minutes.
 
 ---
 
@@ -165,7 +165,7 @@ After manual hardening, **5 Python scripts** using the AWS Boto3 SDK were writte
 | Risk ID | Finding | Decision | Justification |
 |:---|:---|:---:|:---|
 | AR-001 | Root uses virtual MFA not hardware MFA | Accept | Hardware token unavailable for lab. Virtual MFA provides strong protection. Compensating control: root not used for daily operations. |
-| AR-002 | AdministratorAccess AWS managed policy exists | Accept | AWS managed policy — cannot be deleted. NOT attached to any user. ReadOnlyAccess applied to all users. |
+| AR-002 | AdministratorAccess AWS managed policy exists | Accept | AWS managed policy cannot be deleted. NOT attached to any user. ReadOnlyAccess applied to all users. |
 
 ---
 
@@ -203,11 +203,11 @@ CloudSecurityAudit/
 
 ## 💡 Key Takeaways
 
-- Cloud environments are **insecure by default** — security must be actively configured
+- Cloud environments are **insecure by default** security must be actively configured
 - **IAM misconfigurations** (no MFA, overly permissive policies) are the highest risk category
 - **Logging gaps** (CloudTrail, VPC Flow Logs, GuardDuty) leave environments completely blind to attacks
 - **Open security groups** are trivially easy to exploit and trivially easy to fix
-- Not all scanner findings require remediation — **professional judgment** and accepted risk documentation matter as much as technical fixes
+- Not all scanner findings require remediation **professional judgment** and accepted risk documentation matter as much as technical fixes
 - **Scripted verification** catches gaps that manual console review misses
 
 ---
