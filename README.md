@@ -219,8 +219,8 @@ BTech CSE (Cybersecurity)
 CompTIA Security+ · AWS Solutions Architect Associate (SAA-C03)  
 TryHackMe — Top 4% globally (95+ rooms)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shauryaman_Menaria-0077B5?style=flat&logo=linkedin)]([https://linkedin.com/in/shauryaman-menaria](https://www.linkedin.com/in/shauryaman-menaria-b9b92b220/)
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-Top_4%25-212C42?style=flat&logo=tryhackme)]([https://tryhackme.com/p/Shauryaman4412](https://tryhackme.com/p/5h4ury4r00t)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shauryaman_Menaria-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/shauryaman-menaria-b9b92b220/)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-Top_4%25-212C42?style=flat&logo=tryhackme)](https://tryhackme.com/p/5h4ury4r00t)
 
 ---
 
